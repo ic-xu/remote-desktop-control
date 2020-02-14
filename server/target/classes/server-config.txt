@@ -1,0 +1,11 @@
+#控制端控制傀儡端重试时间间隔(ms)
+master.connect.puppetName.retry.interval=1000
+
+#控制端控制傀儡端重试次数
+master.connect.puppetName.retry.times=10
+
+#服务器IP
+server.ip=134.175.53.207
+
+#服务器端口
+server.port=1234

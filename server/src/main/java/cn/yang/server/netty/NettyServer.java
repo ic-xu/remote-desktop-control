@@ -36,7 +36,8 @@ public class NettyServer {
                      .childOption(ChannelOption.SO_KEEPALIVE,true)
                      .childHandler(channelInitialize);
 
-            final ChannelFuture f = bootstrap.bind(host, port).sync();
+//            final ChannelFuture f = bootstrap.bind(host, port).sync();
+            final ChannelFuture f = bootstrap.bind(port).sync();
 
             LOGGER.info("server start on port:{}",port);
             f.channel().closeFuture().sync();
