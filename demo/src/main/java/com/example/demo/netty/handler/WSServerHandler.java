@@ -24,9 +24,9 @@ public class WSServerHandler extends SimpleChannelInboundHandler<TextWebSocketFr
     }
 
     @Override
-    protected void channelRead0(ChannelHandlerContext ctx, TextWebSocketFrame msg) throws Exception {
-        System.out.println("服务器收到的消息为："+ LocalDateTime.now()+" "+msg.text());
-        ctx.writeAndFlush(new TextWebSocketFrame(new Date().toString()));
+    protected void channelRead0(ChannelHandlerContext ctx, TextWebSocketFrame msg) {
+        System.out.println("服务器收到的消息为："+msg.text());
+        ctx.writeAndFlush(new TextWebSocketFrame(new Date().toString()+" : "+msg.text()));
     }
 
     @Override

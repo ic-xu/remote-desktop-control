@@ -28,7 +28,7 @@ public class InitHandle extends ChannelInitializer<SocketChannel> {
            2、webSocket 是基于http协议的，所以要用到http编解码器
            3、这点和http服务器一样
          */
-        pipeline.addLast("httpHandle encode-decode", new HttpServerCodec());
+        pipeline.addLast("httpHandle_encode-decode", new HttpServerCodec());
 
         /*
             说明：
