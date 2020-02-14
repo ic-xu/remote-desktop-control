@@ -1,7 +1,7 @@
 package com.example.demo.netty;
 
 
-import com.example.demo.netty.handler.HttpServerHandle;
+import com.example.demo.netty.handler.WSServerHandler;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;
@@ -55,6 +55,6 @@ public class InitHandle extends ChannelInitializer<SocketChannel> {
          */
         pipeline.addLast(new WebSocketServerProtocolHandler("/hello"));
 
-        pipeline.addLast(new HttpServerHandle());
+        pipeline.addLast(new WSServerHandler());
     }
 }
